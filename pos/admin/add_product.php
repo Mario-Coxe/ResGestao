@@ -11,13 +11,13 @@ if (isset($_POST['addProduct'])) {
     $err = "Blank Values Not Accepted";
   } else {
     $prod_id = $_POST['prod_id'];
-    $prod_code = $_POST['prod_code'];
+    $prod_code  = $_POST['prod_code'];
     $prod_name = $_POST['prod_name'];
     $prod_img = $_FILES['prod_img']['name'];
     move_uploaded_file($_FILES["prod_img"]["tmp_name"], "assets/img/products/" . $_FILES["prod_img"]["name"]);
     $prod_desc = $_POST['prod_desc'];
     $prod_price = $_POST['prod_price'];
-
+	//Visit codeastro.com for more projects
     //Insert Captured information to a database table
     $postQuery = "INSERT INTO rpos_products (prod_id, prod_code, prod_name, prod_img, prod_desc, prod_price ) VALUES(?,?,?,?,?,?)";
     $postStmt = $mysqli->prepare($postQuery);
@@ -46,79 +46,75 @@ require_once('partials/_head.php');
     <?php
     require_once('partials/_topnav.php');
     ?>
-    <!-- Header -->
-    <div style="background-image: url(assets/img/theme/restro00.jpg); background-size: cover;"
-      class="header  pb-8 pt-5 pt-md-8">
-      <span class="mask bg-gradient-dark opacity-8"></span>
+    <!-- Header --><!-- For more projects: Visit codeastro.com  -->
+    <div style="background-image: url(assets/img/theme/restro00.jpg); background-size: cover;" class="header  pb-8 pt-5 pt-md-8">
+    <span class="mask bg-gradient-dark opacity-8"></span>
       <div class="container-fluid">
         <div class="header-body">
         </div>
       </div>
-    </div>
+    </div><!-- For more projects: Visit codeastro.com  -->
     <!-- Page content -->
     <div class="container-fluid mt--8">
-      <!-- Tabela -->
+      <!-- Table -->
       <div class="row">
         <div class="col">
           <div class="card shadow">
             <div class="card-header border-0">
-              <h3>Preencha todos os campos</h3>
-            </div>
+              <h3>Please Fill All Fields</h3>
+            </div><!-- For more projects: Visit codeastro.com  -->
             <div class="card-body">
               <form method="POST" enctype="multipart/form-data">
                 <div class="form-row">
                   <div class="col-md-6">
-                    <label>Nome do Produto</label>
+                    <label>Product Name</label>
                     <input type="text" name="prod_name" class="form-control">
                     <input type="hidden" name="prod_id" value="<?php echo $prod_id; ?>" class="form-control">
                   </div>
                   <div class="col-md-6">
-                    <label>Código do Produto</label>
-                    <input type="text" name="prod_code" value="<?php echo $alpha; ?>-<?php echo $beta; ?>"
-                      class="form-control" value="">
+                    <label>Product Code</label>
+                    <input type="text" name="prod_code" value="<?php echo $alpha; ?>-<?php echo $beta; ?>" class="form-control" value="">
                   </div>
                 </div>
-                <hr>
+                <hr><!-- For more projects: Visit codeastro.com  -->
                 <div class="form-row">
                   <div class="col-md-6">
-                    <label>Imagem do Produto</label>
+                    <label>Product Image</label>
                     <input type="file" name="prod_img" class="btn btn-outline-success form-control" value="">
                   </div>
                   <div class="col-md-6">
-                    <label>Preço do Produto</label>
+                    <label>Product Price</label>
                     <input type="text" name="prod_price" class="form-control" value="">
                   </div>
                 </div>
-                <hr>
+                <hr><!-- For more projects: Visit codeastro.com  -->
                 <div class="form-row">
                   <div class="col-md-12">
-                    <label>Descrição do Produto</label>
+                    <label>Product Description</label>
                     <textarea rows="5" name="prod_desc" class="form-control" value=""></textarea>
                   </div>
                 </div>
                 <br>
                 <div class="form-row">
                   <div class="col-md-6">
-                    <input type="submit" name="addProduct" value="Adicionar Produto" class="btn btn-success" value="">
+                    <input type="submit" name="addProduct" value="Add Product" class="btn btn-success" value="">
                   </div>
                 </div>
               </form>
             </div>
           </div>
         </div>
-      </div>
+      </div><!-- For more projects: Visit codeastro.com  -->
+      <!-- Footer -->
+      <?php
+      require_once('partials/_footer.php');
+      ?>
     </div>
-
-    <!-- Footer -->
-    <?php
-    require_once('partials/_footer.php');
-    ?>
-  </div>
   </div>
   <!-- Argon Scripts -->
   <?php
   require_once('partials/_scripts.php');
   ?>
 </body>
-
+<!-- For more projects: Visit codeastro.com  -->
 </html>
