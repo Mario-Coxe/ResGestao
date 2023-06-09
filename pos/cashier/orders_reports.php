@@ -68,7 +68,7 @@ require_once('partials/_head.php');
                                             <td><?php if ($order->order_status == '') {
                                                     echo "<span class='badge badge-danger'>Não Pago</span>";
                                                 } else {
-                                                    echo "<span class='badge badge-success'>$order->order_status</span>";
+                                                    echo "<span class='badge badge-success'>Pago</span>";
                                                 } ?></td>
                                             <td class="text-success"><?php echo date('d/M/Y g:i', strtotime($order->created_at)); ?></td>
                                         </tr>
