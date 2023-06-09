@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 08-Abr-2023 às 07:55
+-- Generation Time: 01-Jun-2023 às 07:55
 -- Versão do servidor: 10.1.38-MariaDB
 -- versão do PHP: 7.3.2
 
@@ -69,8 +69,8 @@ INSERT INTO `rpos_customers` (`customer_id`, `customer_name`, `customer_phoneno`
 ('35135b319ce3', 'Emeliano Coxe', '7412569698', 'customer@mail.com', '10470c3b4b1fed12c3baac014be15fac67c6e815', '2023-03-16 11:39:23.572284'),
 ('3859d26cd9a5', 'Louise R. Holloman', '7856321000', 'holloman@mail.com', '55c3b5386c486feb662a0785f340938f518d547f', '2022-09-03 12:38:12.149280'),
 ('57b7541814ed', 'Howard W. Anderson', '8745554589', 'howard@mail.com', '55c3b5386c486feb662a0785f340938f518d547f', '2022-09-03 08:35:10.959590'),
-('5a34922a0c95', 'JosÃ©', '+244925805753', 'jose1@mail.com', '10470c3b4b1fed12c3baac014be15fac67c6e815', '2023-02-28 18:33:23.840575'),
 ('7c8f2100d552', 'Melody E. Hance', '3210145550', 'melody@mail.com', 'a69681bcf334ae130217fea4505fd3c994f5683f', '2022-09-03 13:16:23.996068'),
+('92c1f8697892', 'MÃ¡rio ', '+244925805753', 'coxe@mail.com', '10470c3b4b1fed12c3baac014be15fac67c6e815', '2023-06-01 05:37:52.646479'),
 ('9c7fcc067bda', 'Delbert G. Campbell', '7850001256', 'delbert@mail.com', '55c3b5386c486feb662a0785f340938f518d547f', '2022-09-03 12:38:56.944364'),
 ('9f6378b79283', 'William C. Gallup', '7145665870', 'william@mail.com', '55c3b5386c486feb662a0785f340938f518d547f', '2022-09-03 12:39:26.507932'),
 ('b831fc66b3f8', 'MÃ¡rio Coxe', '+244925805753', 'cox3site59@gmail.com', '547dbcc1a8840a5d699996bddb20ee35e51aeac1', '2023-02-16 22:13:10.637652'),
@@ -104,13 +104,13 @@ CREATE TABLE `rpos_orders` (
 
 INSERT INTO `rpos_orders` (`order_id`, `order_code`, `customer_id`, `customer_name`, `prod_id`, `prod_name`, `prod_price`, `prod_qty`, `order_status`, `created_at`) VALUES
 ('019661e097', 'AEHM-0653', '06549ea58afd', 'Ana J. Browne', 'bd200ef837', 'Turkish Coffee', '8', '1', 'Paid', '2022-09-03 13:26:00.389027'),
+('1ab2a0a3a1', 'GBEK-9374', '92c1f8697892', 'MÃ¡rio ', '06dc36c1be', 'Massa', '3000', '10', 'Paid', '2023-06-01 05:39:54.159770'),
 ('37abbfd9e1', 'PJRD-2173', 'b831fc66b3f8', 'MÃ¡rio Coxe', 'e769e274a3', 'Frappuccino', '3', '2', 'Paid', '2023-02-16 22:19:27.323536'),
 ('49c1bd8086', 'IUSP-9453', 'fe6bb69bdd29', 'Brian S. Boucher', 'd57cd89073', 'Country Fried Steak', '10', '1', 'Paid', '2022-09-03 11:50:40.812796'),
 ('514ada5047', 'OTEV-8532', '3859d26cd9a5', 'Louise R. Holloman', '0c4b5c0604', 'Spaghetti Bolognese', '15', '1', 'Paid', '2022-09-03 13:13:39.042869'),
 ('5e5c339940', 'DMJH-6958', 'b831fc66b3f8', 'MÃ¡rio Coxe', '06dc36c1be', 'Philly Cheesesteak', '7', '2', 'Paid', '2023-03-11 07:36:47.901795'),
 ('6466fd5ee5', 'COXP-6018', '7c8f2100d552', 'Melody E. Hance', '31dfcc94cf', 'Buffalo Wings', '11', '2', 'Paid', '2022-09-03 12:17:44.680896'),
 ('7cf0ed36df', 'YTFL-4852', '06549ea58afd', 'Ana J. Browne', '14c7b6370e', 'Reuben Sandwich', '8', '2', 'Paid', '2023-02-28 18:00:59.476818'),
-('7ef9e3bef1', 'RQEC-6187', '5a34922a0c95', 'JosÃ©', '2b976e49a0', 'Cheeseburger', '3', '2', '', '2023-03-11 08:32:44.094914'),
 ('80ab270866', 'JFMB-0731', '35135b319ce3', 'Christine Moore', '97972e8d63', 'Irish Coffee', '11', '1', 'Paid', '2022-09-04 16:37:03.716697'),
 ('8815e7edfc', 'QOEH-8613', '29c759d624f9', 'Trina L. Crowder', '2b976e49a0', 'Cheeseburger', '3', '3', 'Paid', '2022-09-03 12:02:32.985451'),
 ('a27f1d87be', 'EJKA-4501', '35135b319ce3', 'Christine Moore', 'ec18c5a4f0', 'Corn Dogs', '4', '2', 'Paid', '2022-09-04 16:31:54.581984'),
@@ -119,6 +119,7 @@ INSERT INTO `rpos_orders` (`order_id`, `order_code`, `customer_id`, `customer_na
 ('c051fc38eb', 'ONSY-2465', '57b7541814ed', 'Howard W. Anderson', '826e6f687f', 'Margherita Pizza', '12', '1', 'Paid', '2022-09-03 08:35:50.570496'),
 ('c7a62f8bb7', 'CRSM-7268', '35135b319ce3', 'Christine Moore', 'e769e274a3', 'Frappuccino', '3', '1', '', '2023-03-11 10:20:45.632639'),
 ('e0979a77f7', 'CPAT-2591', '06549ea58afd', 'Ana J. Browne', '06dc36c1be', 'Philly Cheesesteak', '7', '1', 'Paid', '2023-02-28 17:58:58.743646'),
+('ead2eb8d4a', 'NZRA-5037', '35135b319ce3', 'Emeliano Coxe', '06dc36c1be', 'Massa', '3000', '2', 'Paid', '2023-06-01 05:35:57.207851'),
 ('fc79a55455', 'INHG-0875', '9c7fcc067bda', 'Delbert G. Campbell', '3adfdee116', 'Enchiladas', '10', '1', 'Paid', '2022-09-04 16:35:22.539542');
 
 -- --------------------------------------------------------
@@ -166,6 +167,7 @@ CREATE TABLE `rpos_payments` (
 INSERT INTO `rpos_payments` (`pay_id`, `pay_code`, `order_code`, `customer_id`, `pay_amt`, `pay_method`, `created_at`) VALUES
 ('0a4fe7', 'ASZVM5TQCX', 'DMJH-6958', 'b831fc66b3f8', '14', 'Cash', '2023-03-11 07:36:47.809803'),
 ('0bf592', '9UMWLG4BF8', 'EJKA-4501', '35135b319ce3', '8', 'Cash', '2022-09-04 16:31:54.525284'),
+('3d6c30', 'WXQE6SGV4T', 'GBEK-9374', '92c1f8697892', '30000', 'Electronico', '2023-06-01 05:39:54.102774'),
 ('4423d7', 'QWERT0YUZ1', 'JFMB-0731', '35135b319ce3', '11', 'Cash', '2022-09-04 16:37:03.655834'),
 ('442865', '146XLFSC9V', 'INHG-0875', '9c7fcc067bda', '10', 'Paypal', '2022-09-04 16:35:22.470600'),
 ('61efdd', 'J2I3X7QSCU', 'PJRD-2173', 'b831fc66b3f8', '6', 'Cash', '2023-02-16 22:19:27.249544'),
@@ -176,6 +178,7 @@ INSERT INTO `rpos_payments` (`pay_id`, `pay_code`, `order_code`, `customer_id`, 
 ('968488', '5E31DQ2NCG', 'COXP-6018', '7c8f2100d552', '22', 'Cash', '2022-09-03 12:17:44.639979'),
 ('984539', 'LSBNK1WRFU', 'FNAB-9142', '35135b319ce3', '18', 'Paypal', '2022-09-04 16:32:14.852482'),
 ('9fcee7', 'AZSUNOKEI7', 'OTEV-8532', '3859d26cd9a5', '15', 'Cash', '2022-09-03 13:13:38.855058'),
+('be4acd', 'V8LKEYBIFJ', 'NZRA-5037', '35135b319ce3', '6000', 'Cash', '2023-06-01 05:35:57.117861'),
 ('c81d2e', 'WERGFCXZSR', 'AEHM-0653', '06549ea58afd', '8', 'Cash', '2022-09-03 13:26:00.331494'),
 ('e46e29', 'QMCGSNER3T', 'ONSY-2465', '57b7541814ed', '12', 'Cash', '2022-09-03 08:35:50.172062'),
 ('eaf8a2', 'IRQVT6HBOK', 'YTFL-4852', '06549ea58afd', '16', 'Paypal', '2023-02-28 18:00:59.401825');
@@ -250,8 +253,7 @@ CREATE TABLE `rpos_staff` (
 --
 
 INSERT INTO `rpos_staff` (`staff_id`, `staff_name`, `staff_number`, `staff_email`, `staff_password`, `created_at`) VALUES
-(2, 'Cashier James', 'QEUY-9042', 'cashier@mail.com', '10470c3b4b1fed12c3baac014be15fac67c6e815', '2022-09-12 10:13:37.930915'),
-(3, 'STAFF1', 'EYUO-8519', 'staff@mail.com', '10470c3b4b1fed12c3baac014be15fac67c6e815', '2023-02-28 18:23:31.565698');
+(5, 'STAFF1', 'KSLA-8264', 'cashier@mail.com', '10470c3b4b1fed12c3baac014be15fac67c6e815', '2023-06-01 05:35:01.625923');
 
 --
 -- Indexes for dumped tables
@@ -316,7 +318,7 @@ ALTER TABLE `rpos_pass_resets`
 -- AUTO_INCREMENT for table `rpos_staff`
 --
 ALTER TABLE `rpos_staff`
-  MODIFY `staff_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `staff_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Constraints for dumped tables
